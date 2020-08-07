@@ -1,0 +1,1075 @@
+GET http://fiddler2.com/content/GetArticles?clientId=9946E9A676D94C727B9D176975BEC931831B7B19D9426BF1B16C1A3DEBBDF631 HTTP/1.1
+Host: fiddler2.com
+Connection: Keep-Alive
+
+import paramiko
+
+ssh=p port,name,passwd,..)
+ssh.exec_command("commands")
+return stdin,stdout,stderr
+ssh.close()
+
+
+
+import paramiko 
+
+tran = paramiko.Transport('172.25.254.31',22) 
+tran.connect(username='root',password='westos') 
+sftp = paramiko.SFTPClient.from_transport(tran) 
+sftp.put(localpath,remotepath) 
+sftp.get(remotepath, localpath) 
+
+
+==sftp=ssh.open_sftp()
+..
+sftp.get()
+
+sftp.close()
+ssh.close()
+
+13:50 2020/4/25 星期六
+
+
+11:26 2020/4/27 星期一
+ssh协议：openssh,SSHv2---底层实现ansible就是基于该基础实现的自动化运维工具
+
+ftp.open_sftp()
+
+
+passwd chpasswd piliang 
+chpasswd < ueser.txt
+cat >>user.txt <<eof
+user1:password1
+user2:password2
+
+openssl rand -hex 8  -base64                                                                                                                                        
+
+tr -dc A-Za-z0-9_ < /dev/urandom  ｜head -c 20 |xargs 
+tr -dc  删除替换
+tr -s ' ' 
+
+echo "username：password” ｜ chpasswd 
+echo "ejiwqe" |passwd user1 
+
+/etc/passwd 
+/etc/groups /etc/shadow gshadow 
+7个自断
+user:x:uid:gid:home:comment:shell
+getent 
+
+cid=243413&term_id=100406951&taid=2622266513012437&vid=5285890793883618028
+
+
+
+find [option] [conditons] [action] -ok {} /;  -exec {};
+ | xargs command 
+
+import paramiko 
+ssh = paramiko.SSHclinet（）
+ssh.connect(
+hostname
+port,
+username,
+password,
+pkey..
+)
+ssh.exec_command（）
+return  stdin stdout stderr
+
+ftp=ssh.open_stfp()
+ftp.get()
+ftp.put()
+,listdir
+mkdir
+chmod....
+
+需求分析，接口参数文档，测试用例，测试环境搭建，验证测试，bug分析处理，测试报告
+
+
+
+
+inspect
+
+docker client deamon images container hub
+
+docker run pull push images network volumns 
+docker run -it|-d --name container_name -rm -p 80:80  images:tag  command  
+ /bin/echo "hello world"
+
+volumns :
+
+镜像是只读，无法修改，修改的只是容器。在容器修改的内容，只对当前有效，容器一旦退出，所有内容也丢失
+
+
+docker network create
+
+docker network create -d bridge --subnet 10.0.0.0/24 my_bridge #-d --driver指定驱动模式
+
+			[driver]
+
+
+列出 Kubernetes 资源
+命令	描述
+kubectl get services	列出当前名称空间中的所有 Kubernetes 服务
+kubectl get pods --all-namespaces	列出所有名称空间中的所有 Pod
+kubectl get pods -o wide	从当前名称空间生成更详细的 Pod 输出
+kubectl describe nodes [node-name]	显示节点 [node-name] 的简要描述
+kubectl describe pods [pod-name]	显示 Pod [pod-name] 的简要描述
+
+操作 Kubernetes 资源
+命令	描述
+kubectl create deployment foo --image=foo	部署 foo 的单个实例
+kubectl create -f ./local-manifest.yaml	通过名为 local-manifest.yaml 的 Kubernetes 清单文件创建资源
+kubectl delete -f ./bar.json	删除名为 bar.json 的文件中定义的 Pod
+kubectl delete pod,service silver gold	删除名称为 silver 和 gold 所有 Pod 和服务
+
+
+useradd -m docker  :-m 自动创建家目录
+
+[root@k8smaster01 ~]# for all_ip in ${ALL_IPS[@]}
+  3   do
+  4     echo ">>> ${all_ip}"
+  5     scp environment.sh root@${all_ip}:/opt/k8s/bin/
+  6     ssh root@${all_ip} "chmod +x /opt/k8s/bin/*"
+  7   done
+
+
+
+
+
+p=faic*pt kg/m^3
+
+echo $?
+crontab -u tomcat -e
+* */2 * * * /usr/bin/echo "hello world" 
+
+test 1 -gt 2 
+[ 1 -eq 3 ]
+
+
+tar -zcfv tar.gz /etc/*
+
+
+tar -zxf tar.gz
+
+class ClassName(object):
+
+
+class ClassName:
+	suit
+	.
+	.
+	suits
+
+类对象支持两种操作：属性引用和实例化。
+class Myclass:
+  name="tong"
+  def sayHi(self):
+	return 'hello world'
+
+1. Myclass.name  Myclass.sayHi
+2.new=Myclass()
+	          
+def __init__(self):
+	
+
+按照定义，类中所有（用户定义）的函数对象对应它的实例中的方法。所以在我们的例子中，x.f 是一个有效的方法引用，因为 MyClass.f 是一个函数。但 x.i 不是，因为 MyClass.i 不是函数。不过 x.f 和 MyClass.f 不同，它是一个 方法对象 ，不是一个函数对象。
+
+x.f()
+
+
+class Dog:
+
+    kind = 'canine'         # class variable shared by all instances共享变量
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance，属于实例化对象的变量
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+
+
+
+当然，如果一种语言不支持继承就，“类”就没有什么意义。派生类的定义如下所示:
+__foo__: 定义的是特殊方法，一般是系统定义名字 ，类似 __init__() 之类的。
+
+_foo: 以单下划线开头的表示的是 protected 类型的变量，即保护类型只能允许其本身与子类进行访问，不能用于 from module import *
+
+__foo: 双下划线的表示的是私有类型(private)的变量, 只能是允许这个类本身进行访问了
+
+
+
+for i in range(len(A)): 
+      
+   
+    min_idx = i 
+    for j in range(i+1, len(A)): 
+        if A[min_idx] > A[j]: 
+            min_idx = j 
+                
+    A[i], A[min_idx] = A[min_idx], A[i] 
+  
+print ("排序后的数组：") 
+for i in range(len(A)): 
+    print("%d" %A[i]),
+
+
+
+
+def bubbleSort(arr):
+    n = len(arr)
+ 
+    # 遍历所有数组元素
+    for i in range(n):
+ 
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+ 
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+ 
+arr = [64, 34, 25, 12, 22, 11, 90]
+ 
+bubbleSort(arr)
+ 
+print ("排序后的数组:")
+for i in range(len(arr)):
+    print ("%d" %arr[i]),
+
+
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+ 
+import os
+for root, dirs, files in os.walk(".", topdown=False):
+    for name in files:
+        print(os.path.join(root, name))
+    for name in dirs:
+        print(os.path.join(root, name))
+
+
+top -- 是你所要遍历的目录的地址, 返回的是一个三元组(root,dirs,files)。
+
+root 所指的是当前正在遍历的这个文件夹的本身的地址
+dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)
+files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)
+
+
+#!/usr/bin/python
+# -*- coding: UTF-8 -*- 
+
+import re 
+phone = "2004-959-559 # 这是一个国外电话号码" 
+# 删除字符串中的 Python注释 
+num = re.sub(r'#.*$', "", phone)
+print "电话号码是: ", num
+ 
+# 删除非数字(-)的字符串 
+num = re.sub(r'\D', "", phone)
+print "电话号码是 : ", num
+
+
+
+
+class Test{
+  def m(x: Int) = x + 3
+  val f = (x: Int) => x + 3
+}
+
+val t=new Test()
+
+闭包是一个函数，返回值依赖于声明在函数外部的一个或多个变量--自由变量。
+
+val multiplier = (i:Int) => i * 10 
+
+
+var factor = 3  
+val multiplier = (i:Int) => i * factor
+
+计算机进程的控制通常由原语完成。
+所谓原语，一般是指由若干条指令组成的程序段，用来实现某个特定功能，在执行过程中不可被中断
+（不是由进程，而是由一组程序模块组成）的一个组成部分，并且常驻内存，通常在管态下执行
+
+原语是在操作系统中调用核心层子程序的指令。
+与一般广义指令的区别在于它是不可中断的，而且总是作为一个基本单位出现
+
+它们是“原子操作（primitive or atomic action）
+
+
+
+
+
+Scala 程序使用 Option 非常频繁，在 Java 中使用 null 来表示空值，代码中很多地方都要添加 null 关键字检测，不然很容易出现 NullPointException。因此 Java 程序需要关心那些变量可能是 null,而这些变量出现 null 的可能性很低，但一但出现，很难查出为什么出现 NullPointerException。
+
+
+object对象不能带参数
+
+
+
+object Test {  
+   def main(args: Array[String]) {  
+      println( "muliplier(1) value = " +  multiplier(1) )  
+      println( "muliplier(2) value = " +  multiplier(2) )  
+	  val map1=Map("name"->"Q",'a'->1,"age"->20)
+   	  println(map1)
+	  println(map1.getClass.getSimpleName)
+	  println(map1.keys,map1.values)
+	  println(map1.get("namer"))
+	 /* 
+	  println(map1["name"])
+	 */
+	  val itb = Iterator(20,40,2,50,69,90)
+	   for(i<- 1 to itb.size){
+		   println(itb.next())
+	   }
+   }  
+   var factor = 3  
+   val multiplier = (i:Int) => i * factor  
+
+   
+}
+
+
+
+./flume-ng agent  -f ../conf/test-conf.properties  -n a1  -Dflume.root.logger=INFO,console
+
+启动监控
+[root@namenode1 bin]# ./flume-ng agent  -f ../conf/test-conf.properties  -n a1 -Dflume.monitoring.type=http -Dflume.monitoring.port=34545
+
+
+核心资源：农业时代 土地  工业时代 能源  信息时代  数据
+
+
+object 99{
+  def main(args:Array[String]):Unit={}
+}
+
+
+import java.io.PrintWriter
+
+val write=new PrintWriter("D://99.txt")
+
+for(i<-1 to 9;j<-1 to i){
+   writer.print(s"$j X $i=${i*j}")
+   if (i==j){
+     writer.println()
+   }
+}
+writer.flush()
+writer.close()
+
+import scala.io.Source
+val file=Source.fromFile("D:\\99.txt")
+val lines=file.getLines()
+lines.foreach(i=>println(i))
+
+
+
+ 
+Scala的每个类都有主构造器。但是，Scala的主构造器和Java有着明显的不同，Scala的主构造器是整个类体，
+需要在类名称后面罗列出构造器所需的所有参数，这些参数被编译成字段，字段的值就是创建对象时传入的参数的值
+
+
+特质的定义和类的定义非常相似，有区别的是，特质定义使用关键字trait。
+
+
+如果有 2N+1 台 JournalNode，那么根据大多数的原则，最多可以容忍有 N 台 JournalNode 节点挂掉
+
+
+
+
+
+zookeeper.sh
+#zk ,hdfs ,yarn,mapr,hbase ,inital env
+#version 1.0
+
+#!/bin/bash
+#接收参数判断,
+if [ $# != n ];then
+  print("error missing args:usage: ")
+  exit(2)
+fi
+
+#shutdown selinux and iptables
+status=$(getenforce)
+if [ $status == "Enforcing" ];then
+sed -i "s/^SELINUX==Enforcing/SELINUX==disabled" /etc/selinux/config 
+systemctl stop firewalld.service && systemctl disable firewalld.service
+iptable -F
+
+#SET HOSTNAME,ip
+hostnamectl set-hostname $hostname
+nmcli conn modify &netconn 
+
+cat>>/etc/hosts<<EOF
+hadoop1 192.168.1.10
+hadoop2 192.168.1.20
+hadoop3 192.168.1.30
+EOF
+
+
+
+#create yum repo
+if [ -d /var/www/html ];then
+   mount /dev/cdrom /mnt/
+   yum clean all && yum makecache fast
+   yum intall -y httpd expect fuser chrony
+   cp /mnt/ /var/www/html/
+   umount /mnt
+fi
+
+#sync time chrony
+
+
+
+
+
+# vim copykey.sh
+
+#!/bin/bash
+
+# 判断id_rsa密钥文件是否存在
+if [ ! -f ~/.ssh/id_rsa ];then
+ ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+else
+ echo "id_rsa has created ..."
+fi
+
+#分发到各个节点,这里分发到host文件中的主机中.
+
+while read line
+  do
+    user=`echo $line | cut -d " " -f 2`
+    ip=`echo $line | cut -d " " -f 1`
+    passwd=`echo $line | cut -d " " -f 3`
+    
+    expect <<EOF
+      set timeout 10
+      spawn ssh-copy-id $user@$ip
+      expect {
+        "yes/no" { send "yes\n";exp_continue }
+        "password" { send "$passwd\n" }
+      }
+     expect "password" { send "$passwd\n" }
+EOF
+  done <  hosts
+
+
+
+
+case $1 in
+  master )
+  command
+  ;;
+
+  *)
+
+  ;;
+esac
+
+
+version 2:
+
+if [ ! -f ~/.ssh/id_rsa ];then
+  ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+else
+  echo "id_rsa has created ..."
+fi
+    	
+for num in 10 20 30;do   
+  expect <<EOF
+  set timeout 10
+  spawn ssh-copy-id root@192.168.1.$num
+  expect {
+        "yes/no" { send "yes\n";exp_continue }
+        "password" { send "redhat\n" }
+      }
+   expect "password" { send "$passwd\n" }
+   EOF
+done
+
+
+stage划分的原理，以及stage划分后shuffle操作是如何在两个stage的边界处执行的
+
+
+
+ * stage0，主要是执行从textFile到map操作，以及执行shuffle write操作。shuffle write操作，我们可以简单理解为对pairs RDD中的数据进行分区操作，每个task处理的数据中，相同的key会写入同一个磁盘文件内。 
+
+* stage1，主要是执行从reduceByKey到collect操作，stage1的各个task一开始运行，就会首先执行shuffle read操作。执行shuffle read操作的task，会从stage0的各个task所在节点拉取属于自己处理的那些key，然后对同一个key进行全局性的聚合或join等操作，在这里就是对key的value值进行累加。
+
+stage1在执行完reduceByKey算子之后，就计算出了最终的wordCounts RDD，然后会执行collect算子，将所有数据拉取到Driver上，供我们遍历和打印输出
+
+
+
+
+hbse:
+
+#!/bin/bash
+
+echo "describe 'test'" | ./hbase shell -n > /dev/null 2>&1
+status=$?
+echo "The status was " $status
+if ($status == 0); then
+    echo "The command succeeded"
+else
+    echo "The command may have failed."
+fi
+return $status
+
+
+
+
+17. 从命令文件读取 HBase Shell 命令
+Base Shell 命令输入到文本文件中，每行一个命令，并将该文件传递给 HBase Shell。
+cat sample_commands.txt
+create 'test', 'cf'
+list 'test'
+put 'test', 'row1', 'cf:a', 'value1'
+put 'test', 'row2', 'cf:b', 'value2'
+put 'test', 'row3', 'cf:c', 'value3'
+put 'test', 'row4', 'cf:d', 'value4'
+scan 'test'
+get 'test', 'row1'
+disable 'test'
+enable 'test'
+
+
+./hbase shell ./sample_commands.txt
+
+
+
+
+1.import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+
+val conf = new SparkConf().setAppName(appName).setMaster(master)
+val sc=new SparkContext(conf)
+
+2.
+import org.apache.spark.sql.SparkSession;
+
+val spark = SparkSession.builder.appName("Simple Application").getOrCreate()
+val logData = spark.read.textFile(logFile).cache()
+
+
+
+
+--list 
+--describe --topic plane 查看plane的分区信息 压测工具模拟售票情况 
+
+
+
+spark_shell
+
+val test_file=sc.textFile("hdfs;//...")
+val counts=test_file.flatMap(line=>line.spilt(" ")).map(word=>(wrod,1)).reduceByKey(_+_)
+counts.saveAsTextFile("hdfs://...wordscount.txt")
+counts.collect()
+
+
+
+
+ka
+
+tar -zxf jdk-1.8-linux-x64.tar.gz -C /usr/local
+mv dk-1.8-linux-x64 ./java
+
+cat >> /etc/profile.d/kafka.sh <<EOF
+JAVA_HOME=/usr/local/java
+PATH=$PATH:$JAVA_HOME/bin
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+export JAVA_HOME PATH CLASSPATH
+EOF
+
+source /etc/profile.d/kafka.sh
+
+java -version
+if [ $? -eq 0 ];then
+echo "java setup successful"
+fi
+
+
+
+
+hbase.rootdir 指向 local filesystem 中的目录。 
+'file：//'前缀是表示本地文件系。
+在 Standalone 模式下，HBase 利用 Apache Hadoopd 的本地文件存储。
+但是这种方式并不能保证 HBase 运行的持久性。
+
+
+
+
+HMaster 服务器控制 HBase 集群。你可以启动最多 9 个备份 HMaster 服务器，这个服务器总共有 10 个 HMaster 计算主服务器。使用local-master-backup.sh启动备份 HMaster。对于要启动的每个备份主节点，请添加一个表示该主节点的端口偏移量的参数。每个 HMaster 使用三个端口（默认情况下为 16010,16020 和 16030）。端口偏移量 2 添加到这些端口，那么备份 HMaster 将使用端口 16012,16022 和 16032。以下命令启动服务器端口为：16012/16022/16032，16013/16023/16033 和 16015/16025/16035
+
+$ ./bin/local-master-backup.sh start 2 3 5
+
+
+要在不杀死整个群集的情况下杀死备份主机，则需要查找其进程 ID（PID）。PID 存储在一个名为 /tmp/hbase-USER-X-master.pid 的文件中。该文件的唯一内容是 PID。您可以使用该kill -9命令来杀死该 PID。以下命令将终止具有端口偏移 1 的主服务器，但保持群集正在运行：
+
+$ cat /tmp/hbase-testuser-1-master.pid |xargs kill -9
+
+
+$ .bin/local-regionservers.sh start 2 3 4 5
+
+
+
+ ssh-keygen -t rsa
+$ cat id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+
+ulimit -u太低会导致 OutOfMemoryError 异常。
+
+单元格:hbase存储最小单元
+
+单元格是行，列族和列限定符的组合，它包含一个值和一个时间戳，时间戳表示值的版本
+
+
+
+
+
+
+HBase是否支持join操作是发行版列表上的一个常见问题，这有一个简单的答案：它不能，至少在RDBMS支持它们的方式上是这样（例如，在 SQL 中使用 equi-joins 或 outer-joins）。如本章所述，HBase 中的读取数据模型操作是 Get 和 Scan。
+
+
+29.2.5.Delete
+有三种不同类型的内部删除标记。请参阅 Lars Hofhansl 的博客，讨论他试图添加另一个，扫描 HBase：前缀删除标记（Scanning in HBase: Prefix Delete Marker）。
+
+删除：对于特定版本的列。
+
+删除列：适用于列的所有版本。
+
+删除系列：适用于特定 ColumnFamily 的所有列
+
+删除整行时，HBase 将在内部为每个 ColumnFamily 创建一个tombstone（逻辑删除标记），而不是每个单独的列。
+
+通过创建tombstone标记删除工作。例如，假设我们要删除一行。为此您可以指定版本，否则默认使用currentTimeMillis。这意味着 删除版本小于或等于此版本的所有单元格。 HBase 从不在原址修改数据，因此例如delete操作不会立即删除(或标记为已删除)存储文件中与delete条件相对应的条目。相反，标记一个tombstone标志，它将屏蔽删除的值。当HBase进行主要压缩时，将处理tombstone来实际删除值，同时删除tombstone标记。如果删除行时指定的版本大于行中任何值的版本，则删除整行。
+
+有关删除和版本控制如何交互的信息性讨论，请参阅用户邮件列表中的思路 Put w / timestamp→Deleteall→Put w / timestamp failed 。
+
+有关内部 KeyValue 格式的更多信息，另请参见 keyvalue 。
+
+除非在列族中设置KEEP_DELETED_CELLS选项，否则在下一次主要压缩存储期间将清除删除标记（请参阅保留已删除的单元格。要将删除保留一段可配置的时间，可以通过 hbase-site.xml 中的 hbase.hstore.time.to.purge.deletes 属性设置删除 TTL。如果未设置hbase.hstore.time.to.purge.deletes或设置为 0，则在下一次主要压缩过程中将清除所有删除标记，包括将来具有时间戳的标记。否则，将保留具有将来时间戳的删除标记，直到在标记的时间戳加上hbase.hstore.time.to.purge.deletes的值所表示的时间之后发生的主要压缩，以毫秒为单位。
+
+
+
+
+
+kafka扩容时，重启代价比较大，且重启后并不会把分区迁移至新节点，
+当某个topic再进行扩展分区时会启用到新节点。
+
+--可能导致分布不均匀，没有完全发挥硬盘的性能
+
+===>分区迁移方案  partion定向迁移
+
+
+当某个分区节点写错了，直接执行迁移怎么办？
+现象：查看topic信息时出现副本数+1===表示正在迁移中， 
+===》并发迁移，业务量非常大时，导致节点流量增加，整个集群可能崩，节点通过复制操作
+	复制完成后，再删除原来的数据
+
+====》怎么解决？
+	脚本：一个一个分区迁移,串行复制
+
+
+
+package com.github.lw_lin.spark
+
+import org.apache.spark.{SparkContext, SparkConf}
+
+/**
+ * This program can be downloaded at:
+ * https://github.com/lw-lin/CoolplaySpark/tree/master/Spark%20%E6%A0%B7%E4%BE%8B%E5%B7%A5%E7%A8%8B
+ */
+object SparkHelloWorld {
+
+  def main(args: Array[String]) {
+    val conf = new SparkConf()
+    conf.setAppName("SparkHelloWorld")
+    conf.setMaster("local[2]")
+    val sc = new SparkContext(conf)
+
+    val lines = sc.parallelize(Seq("hello world", "hello tencent"))
+    val wc = lines.flatMap(_.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
+    wc.foreach(println)
+
+    Thread.sleep(10 * 60 * 1000) // 挂住 10 分钟; 这时可以去看 SparkUI: http://localhost:4040
+  }
+}
+
+
+
+shuffle
+
+
+
+provides SQL which enables users to do ad-hoc querying, summarization and data analysis easily.
+
+
+Running Hive
+
+先创建目录并授权:
+  $ $HADOOP_HOME/bin/hadoop fs -mkdir       /tmp
+  $ $HADOOP_HOME/bin/hadoop fs -mkdir       /user/hive/warehouse
+  $ $HADOOP_HOME/bin/hadoop fs -chmod g+w   /tmp
+  $ $HADOOP_HOME/bin/hadoop fs -chmod g+w   /user/hive/warehouse
+
+
+1.
+schematool -dbType mysql -initSchema
+
+
+
+2>推荐使用beeline cli接口
+
+$HIVE_HOME/bin/hiveserver2
+$ $HIVE_HOME/bin/beeline -u jdbc:hive2://$HS2_HOST:$HS2_PORT
+
+
+
+DDL
+
+hive> SHOW TABLES '.*s';   matching follows Java regular expressions. 
+
+Table names can be changed and columns can be added or replaced: 
+
+drop table pokes;
+LOAD DATA [LOCAL] INPATH './examples/files/kv2.txt' OVERWRITE INTO TABLE invites PARTITION (ds='2008-08-15');
+
+hive> LOAD DATA INPATH '/user/myname/kv2.txt' OVERWRITE INTO TABLE invites PARTITION (ds='2008-08-15'); hdfs
+
+DML
+INSERT INTO TABLE tablename1 [PARTITION (partcol1=val1, partcol2=val2 ...)] select_statement1 FROM from_statement;
+
+
+
+
+
+Buckets (or Clusters): 
+Data in each partition may in turn be divided into Buckets based on the value of a hash function of some column of the Table. 
+For example the page_views table may be bucketed by userid, which is one of the columns, other than the partitions columns, of the page_view table. These can be used to efficiently sample the data.
+
+
+Note that it is not necessary for tables to be partitioned or bucketed, but these abstractions allow the system to prune large quantities of data during query processing, resulting in faster query execution.
+
+
+
+Hive supports primitive and complex data types简单的、复杂的数据类型
+
+STRUCT {a INT; b INT}, the a field is accessed by the expression c.a
+Maps (key-value tuples): accessed using M['group']  
+Arrays (indexable lists):array A having the elements ['a', 'b', 'c'], A[1] retruns 'b'
+
+
+Built In Operators and Functions：
+关系
+逻辑
+运算
+
+
+
+
+What Is Hive
+Hive is a data warehousing infrastructure based on Apache Hadoop. Hadoop provides massive scale out and fault tolerance capabilities for data storage and processing on commodity hardware.
+
+Hive is designed to enable easy data summarization, ad-hoc querying and analysis of large volumes of data. It provides SQL which enables users to do ad-hoc querying, summarization and data analysis easily. At the same time, Hive's SQL gives users multiple places to integrate their own functionality to do custom analysis, such as User Defined Functions (UDFs).  
+
+What Hive Is NOT
+Hive is not designed for online transaction processing.  It is best used for traditional data warehousing tasks.
+
+
+
+
+  1 [root@uk8s-m-01 study]# vi dapi-liveness.yaml
+  2 apiVersion: v1
+  3 kind: Pod
+  4 metadata:
+  5   name: dapi-liveness-pod
+  6   labels:
+  7     test: liveness-exec
+  8 spec:
+  9   containers:
+ 10     - name: dapi-liveness
+ 11       image: busybox
+ 12       args:
+ 13       - /bin/sh
+ 14       - -c
+ 15       - echo ok > /tmp/health; sleep 10; rm -rf /tmp/health; sleep 600
+ 16       livenessProbe:
+ 17         exec:
+ 18           command:
+ 19           - cat
+ 20           - /tmp/health
+ 21 
+ 22 [root@uk8s-m-01 study]# kubectl describe pod dapi-liveness-pod
+
+pod 
+重启策略
+健康检查
+调度
+Kubernetes中，Pod通常是容器的载体，一般需要通过Deployment、DaemonSet、RC、Job等对象来完成一组Pod的调度与自动控制功能
+	NodeSelector定向调度
+
+ 
+提示：RC的滚动升级不具有Deployment在应用版本升级过程中的历史记录、新旧版本数量的精细控制等功能，RC将逐渐被RS和Deployment所取代，建议用户优先考虑使用Deployment完成Pod的部署和升级操作。
+
+
+ Node隔离
+apiVersion: v1
+kind: Node
+metadata:
+  name: k8snode03
+  labels:
+    kubernetes.io/hostname: k8snode03
+spec:
+  unschedulable: true
+
+[root@k8smaster01 study]# kubectl replace -f unschedule_node.yaml
+[root@k8smaster01 study]# kubectl get nodes #查看下线的节点
+
+二
+[root@k8smaster01 study]# kubectl cordon k8snode01
+[root@k8smaster01 study]# kubectl get nodes | grep -E 'NAME|node01'
+
+kubectl uncordon k8snode01
+
+
+
+
+
+
+insert into student values(1 , 'wangfeng' , '1990-12-21' , 'male');
+insert into student values(2, 'abc' , '1990-11-21' , 'male');
+insert into student values(3 , 'zhangsan' , '1991-1-21' , 'female');
+insert into student values(4 , 'lisi' , '1993-12-10' , 'male');
+insert into student values(5 , 'wangwu' , '1990-10-21' , 'male');
+insert into student values(6 , 'paul' , '1992-6-21' , 'female');
+insert into student values(7 , 'tom' , '1995-10-21' , 'female');
+insert into student values(8 , 'ai' , '1997-11-21' , 'male');
+insert into student values(9 , 'bigdata' , '1990-12-20' , 'female');
+
+
+insert into student (id,name,age,sex) values
+(10 , 'bigdata' , '1998-7-20' , 'male'),
+(11 , 'big' , '1980-4-20' , 'female'),
+(12 , 'flume' , '1980-12-20' , 'male'),
+(13 , 'hive' , '1970-4-20' , 'male'),
+(14 , 'ladygaga' , '1991-5-20' , 'female'),
+(15 , 'spark' , '1993-6-20' , 'male');
+
+
+
+UNION 子句/运算符用于合并两个或多个 SELECT 语句的结果，不返回任何重复的行。
+
+为了使用 UNION，每个 SELECT 被选择的列数必须是相同的，相同数目的列表达式，相同的数据类型，并确保它们有相同的顺序，但它们不必具有相同的长度。
+
+
+SELECT column1, column2....
+FROM table_name [AS] alias_name
+WHERE [condition];
+
+
+
+select a.name ,a.age from student [as] a where id >10;
+
+虽然索引的目的在于提高数据库的性能，但这里有几个情况需要避免使用索引。使用索引时，应重新考虑下列准则：
+
+索引不应该使用在较小的表上。
+
+索引不应该使用在有频繁的大批量的更新或插入操作的表上。
+
+索引不应该使用在含有大量的 NULL 值的列上。
+
+索引不应该使用在频繁操作的列上。
+
+
+视图（View）是一种虚表，允许用户实现以下几点：
+
+用户或用户组查找结构数据的方式更自然或直观。
+
+限制数据访问，用户只能看到有限的数据，而不是完整的表。
+
+汇总各种表中的数据，用于生成报告
+
+
+子查询通常与 SELECT 语句一起使用
+
+自动 VACUUM（Auto-VACUUM）
+SQLite 的 Auto-VACUUM 与 VACUUM 不大一样，它只是把空闲页移到数据库末尾，从而减小数据库大小。通过这样做，它可以明显地把数据库碎片化，而 VACUUM 则是反碎片化。所以 Auto-VACUUM 只会让数据库更小。
+
+
+
+
+16:54 2020/6/20 星期六
+select?A.student_id,sw,?from
+(select?student_id,num?as?sw?from?score?left?join?course?on?
+score.course_id = course.cid?where?course.cname ='sheng wu')?as?A
+left?join
+(select?student_id,num??as?ty?from?score?left?join?course?on?
+score.course_id = course.cid?where?course.cname ='ti yu')?as?B
+on?A.student_id = B.student_id?where?sw > ty;
+
+
+select A.student_id,sw from (select student_id,num as sw from score left
+ join course on score.course_id=course.cid where course.cname='sheng wu')as A;
+
+student_id  sw
+----------  ----------
+1           10
+2           8
+3           77
+4           79
+5           79
+6           9
+7           9
+8           9
+9           91
+10          90
+11          90
+12          90
+sqlite> 
+
+select student_id,sname,class_id,sw,ty from (
+
+select A.student_id,sw,ty from 
+(select student_id,num as sw from 
+score left join course on score.course_id=course.cid where course.cname='sheng wu')as A 
+
+left join 
+(select student_id,num as ty from score left  join course on score.course_id=course.cid where course.cname='ti yu') as B on A.student_id=B.student_id where sw > ty
+) as a left join students on  a.student_id=students.sid;
+
+
+
+Python 模块 unittest 中的工具来测试代码
+核实一系列输入都将得到预期的输出
+单元测试 用于核实函数的某个方面没有问题； 测试用例 是一组单元测试，
+这些单元测试一起核实函数在各种情形下的
+行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情形的测试.
+
+
+import unittest
+from name_function import get_formatted_name
+
+两个测试样例：
+
+class NamesTestCase(unittest.TestCase):
+	""" 测试 name_function.py """
+	def test_first_last_name(self):
+	""" 能够正确地处理像 Janis Joplin 这样的姓名吗？ """
+		formatted_name = get_formatted_name('janis', 'joplin')
+		self.assertEqual(formatted_name, 'Janis Joplin')
+	def test_first_last_middle_name(self):
+	""" 能够正确地处理像 Wolfgang Amadeus Mozart 这样的姓名吗？ """
+		formatted_name = get_formatted_name(
+			'wolfgang', 'mozart', 'amadeus')
+		self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
+unittest.main()
+
+setUp(self):方法类似__init__(self)
+
+
+def count_words(filename):
+? """ 计算一个文件大致包含多少个单词 """
+try:
+	with open(filename) as f_obj:
+		contents = f_obj.read()
+except FileNotFoundError:
+	msg = "Sorry, the file " + filename + " does not exist."
+	print(msg)
+else:
+# 计算文件大致包含多少个单词
+	words = contents.split()
+	num_words = len(words)
+	print("The file " + filename + " has about " + str(num_words) +" words.")
+
+
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+count_words(filename)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
